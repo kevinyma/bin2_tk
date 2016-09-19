@@ -10,13 +10,29 @@ html, body {
 canvas {
 	width: 100%;
 	height: 100%;
-	background: white;
+	background: rgba(0,0,0,0);
+}
+#magnetic-canvas {
+	pointer-events: none;
+}
+#starry-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+img {
+	display: none;
 }
 </style>
 <script type="text/javascript" src="js/paper-full.js"></script>
-<script type="text/paperscript" src="js/magnetic-needles.js" canvas="canvas"></script>
+<script type="text/paperscript" src="js/magnetic-needles.js" canvas="magnetic-canvas"></script>
+<script type="text/paperscript" src="js/starry-night.js" canvas="starry-canvas"></script>
+
 </head>
 <body>
-<canvas id="canvas" resize></canvas>
+<canvas id="magnetic-canvas" resize></canvas>
+<canvas id="starry-canvas" resize></canvas>
+<img src="image/starry-night.jpg" id="starry-night">
 </body>
 </html>

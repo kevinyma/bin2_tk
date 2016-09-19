@@ -1,4 +1,3 @@
-
 var activeConfig = 1;
 var totalConfigs = 1;
 
@@ -19,10 +18,10 @@ generate();
 
 function generate(){
     if (activeConfig==1){
-        thickness = 12;
-        numHor = 20;
-        numVert = 10;
-        to = [50, 56];
+        thickness = 7;
+        numHor = 40;
+        numVert = 25;
+        to = (40, 28);
     }
     else if (activeConfig==2){
         thickness = 1;
@@ -73,7 +72,7 @@ function generate(){
     count = numHor * numVert;
     var line = new Path.Line(from, to);
 
-    line.style = {strokeColor : black, strokeWidth : thickness, strokeCap : 'square'};
+    line.style = {strokeColor : white, strokeWidth : thickness, strokeCap : 'square'};
     var symbol = new Symbol(line);
     for (var i = 0; i< numHor; i++){
         for (var j = 0; j< numVert; j++){
