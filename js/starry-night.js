@@ -10,9 +10,7 @@ function Array2D(x, y) {
     return array2D;
 }
 
-var array = [1];
-array[1] = new Point(10, 5);
-print array[1];
+
 
 var raster = new Raster('starry-night');
 

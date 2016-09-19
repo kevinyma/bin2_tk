@@ -77,8 +77,8 @@ function generate(){
     for (var i = 0; i< numHor; i++){
         for (var j = 0; j< numVert; j++){
            var instance = symbol.place();
-             instance.position.x = (view.size.width-nav)/numHor * i + view.size.width/40 +nav;
-             instance.position.y = view.size.height/numVert * j + view.size.height/20;
+             instance.position.x = ((view.size.width-nav)/numHor + 1) * i   +nav;
+             instance.position.y = (view.size.height/numVert +1) * j ;
         }
     }
 }
