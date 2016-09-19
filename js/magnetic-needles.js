@@ -72,7 +72,7 @@ function generate(){
     count = numHor * numVert;
     var line = new Path.Line(from, to);
 
-    line.style = {strokeColor : white, strokeWidth : thickness, strokeCap : 'square'};
+    line.style = {strokeColor : '#FFEBCD', strokeWidth : thickness, strokeCap : 'square'};
     var symbol = new Symbol(line);
     for (var i = 0; i< numHor; i++){
         for (var j = 0; j< numVert; j++){
@@ -88,7 +88,7 @@ function onMouseMove(event){
         var item = project.activeLayer.children[i];
         var vector = event.point - item.position;
         var prevVector = event.lastPoint - item.position;
-        item.rotate(vector.angle-prevVector.angle, item.position);
+        item.rotate(1.1*vector.angle-(prevVector.angle), item.position);
     }
 }
 
